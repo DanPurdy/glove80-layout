@@ -328,12 +328,12 @@
 
         layer_Symbol {
             bindings = <
-  &none      &none            &none     &none      &none                                                                                 &none     &none      &none     &none   &none
- &trans      &none            &none     &none      &none            &none                                                      &none     &none     &none      &none     &none   &none
- &trans     &kp LT  &kp NON_US_BSLH   &kp SQT    &kp DQT         &kp DLLR                                                   &kp AMPS  &kp LBKT  &kp RBKT  &kp QMARK    &kp GT   &none
- &trans   &kp EXCL        &kp MINUS  &kp PLUS  &kp EQUAL  &kp NON_US_HASH                                                   &kp PIPE  &kp LPAR  &kp RPAR  &kp COLON  &kp HASH   &none
-  &none  &kp CARET         &kp BSLH  &kp STAR   &kp FSLH          &dir_up   &none   &none   &none   &none   &none   &none  &kp PRCNT  &kp LBRC  &kp RBRC    &kp DOT    &kp AT   &none
-  &none      &none            &none     &none      &none                    &none   &none   &none   &none   &none   &none                &none     &none      &none     &none   &none
+  &none      &none      &none     &none          &none                                                                                 &none     &none      &none       &none   &none
+ &trans      &none      &none     &none          &none  &kp LA(N2)                                                           &none     &none     &none      &none       &none   &none
+ &trans     &kp LT  &kp GRAVE   &kp SQT        &kp DQT    &kp DLLR                                                        &kp AMPS  &kp LBKT  &kp RBKT  &kp QMARK      &kp GT   &none
+ &trans   &kp EXCL  &kp MINUS  &kp PLUS      &kp EQUAL    &kp HASH                                                        &kp PIPE  &kp LPAR  &kp RPAR  &kp COLON  &kp LA(N3)   &none
+  &none  &kp CARET   &kp BSLH  &kp STAR       &kp FSLH     &dir_up  &kp LSHFT     &none   &none   &none   &none   &none  &kp PRCNT  &kp LBRC  &kp RBRC    &kp DOT      &kp AT   &none
+  &none      &none      &none     &none  &kp LS(GRAVE)              &kp LCTRL  &kp LALT   &none   &none   &none   &none                &none     &none      &none       &none   &none
             >;
         };
 
@@ -343,8 +343,8 @@
  &trans   &none   &none   &none   &none   &none                                                   &none   &none   &none   &none   &none   &none
  &trans   &none   &none   &none   &none   &none                                                   &none   &none   &none   &none   &none   &none
  &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &none
-  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none
-  &none   &none  &tog 3   &none   &none           &none   &none   &none   &none   &none   &none           &none   &none   &none   &none   &none
+  &none   &none   &none   &none   &none   &none  &trans  &trans   &none  &trans  &trans  &trans   &none   &none   &none   &none   &none   &none
+  &none   &none  &tog 3   &none   &none          &trans  &trans  &trans  &trans  &trans  &trans           &none   &none   &none   &none   &none
             >;
         };
 
