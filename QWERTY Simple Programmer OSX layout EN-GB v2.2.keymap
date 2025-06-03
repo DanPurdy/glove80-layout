@@ -35,7 +35,9 @@
 #endif
 
 /* Custom Device-tree */
-
+&lt {
+    tapping-term-ms = <300>;
+};
 
 /* Input Listeners */
 
@@ -306,12 +308,12 @@
 
         layer_Base {
             bindings = <
-               &kp F1    &kp F2  &kp F3    &kp F4     &kp F5                                                                                    &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
-            &kp EQUAL    &kp N1  &kp N2    &kp N3     &kp N4  &kp N5                                                                    &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-              &kp ESC     &kp Q   &kp W     &kp E      &kp R   &kp T                                                                     &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-              &kp TAB     &kp A   &kp S     &kp D      &kp F   &kp G                                                                     &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
-            &kp GRAVE     &kp Z   &kp X     &kp C      &kp V   &kp B  &kp LSHFT  &kp LCTRL    &lower  &kp LCTRL  &kp RGUI    &kp RSHFT   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
- &magic LAYER_Magic 0  &kp HOME  &tog 3  &kp LEFT  &kp RIGHT           &kp BSPC   &kp LGUI  &kp LALT   &kp RALT   &kp RET  &lt 2 SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+               &kp F1    &kp F2  &kp F3  &kp F4  &kp F5                                                                                     &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
+            &kp EQUAL    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                                     &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+              &kp ESC     &kp Q   &kp W   &kp E   &kp R   &kp T                                                                      &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
+              &kp TAB     &kp A   &kp S   &kp D   &kp F   &kp G                                                                      &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+            &kp GRAVE     &kp Z   &kp X   &kp C   &kp V   &kp B  &kp LSHFT  &kp LCTRL    &lower  &kp LCTRL   &kp RGUI    &kp RSHFT   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
+ &magic LAYER_Magic 0  &kp HOME   &none   &none   &none           &kp BSPC   &kp LGUI  &kp LALT   &kp RALT  &lt 3 RET  &lt 2 SPACE           &none      &none  &kp LBKT  &kp RBKT  &kp PG_DN
             >;
         };
 
@@ -328,23 +330,23 @@
 
         layer_Symbol {
             bindings = <
-  &none      &none      &none     &none          &none                                                                                 &none     &none      &none       &none   &none
- &trans      &none      &none     &none          &none  &kp LA(N2)                                                           &none     &none     &none      &none       &none   &none
- &trans     &kp LT  &kp GRAVE   &kp SQT        &kp DQT    &kp DLLR                                                        &kp AMPS  &kp LBKT  &kp RBKT  &kp QMARK      &kp GT   &none
- &trans   &kp EXCL  &kp MINUS  &kp PLUS      &kp EQUAL    &kp HASH                                                        &kp PIPE  &kp LPAR  &kp RPAR  &kp COLON  &kp LA(N3)   &none
-  &none  &kp CARET   &kp BSLH  &kp STAR       &kp FSLH     &dir_up  &kp LSHFT     &none   &none   &none   &none   &none  &kp PRCNT  &kp LBRC  &kp RBRC    &kp DOT      &kp AT   &none
-  &none      &none      &none     &none  &kp LS(GRAVE)              &kp LCTRL  &kp LALT   &none   &none   &none   &none                &none     &none      &none       &none   &none
+  &none      &none      &none     &none          &none                                                                              &none     &none      &none     &none   &none
+ &trans      &none      &none     &none          &none  &kp LA(N2)                                                      &none       &none     &none      &none     &none   &none
+ &trans     &kp LT  &kp GRAVE   &kp SQT        &kp DQT    &kp DLLR                                                   &kp AMPS    &kp LBKT  &kp RBKT  &kp QMARK    &kp GT   &none
+ &trans   &kp EXCL  &kp MINUS  &kp PLUS      &kp EQUAL    &kp HASH                                                   &kp PIPE    &kp LPAR  &kp RPAR  &kp COLON  &kp SEMI   &none
+  &none  &kp CARET   &kp BSLH  &kp STAR       &kp FSLH     &dir_up  &trans  &trans   &none  &trans  &trans  &trans  &kp PRCNT    &kp LBRC  &kp RBRC    &kp DOT    &kp AT   &none
+  &none      &none      &none     &none  &kp LS(GRAVE)              &trans  &trans  &trans  &trans  &trans   &none             &kp LA(N3)     &none      &none     &none   &none
             >;
         };
 
         layer_Numbers {
             bindings = <
-  &none   &none   &none   &none   &none                                                                   &none   &none   &none   &none   &none
- &trans   &none   &none   &none   &none   &none                                                   &none   &none   &none   &none   &none   &none
- &trans   &none   &none   &none   &none   &none                                                   &none   &none   &none   &none   &none   &none
- &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                                  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0   &none
-  &none   &none   &none   &none   &none   &none  &trans  &trans   &none  &trans  &trans  &trans   &none   &none   &none   &none   &none   &none
-  &none   &none  &tog 3   &none   &none          &trans  &trans  &trans  &trans  &trans  &trans           &none   &none   &none   &none   &none
+  &none   &none   &none   &none    &none                                                                    &none   &none   &none    &none   &none
+ &trans   &none   &none   &none    &none   &none                                                   &none    &none   &none   &none    &none   &none
+ &trans  &kp F1  &kp F2  &kp F3   &kp F4  &kp F5                                                  &kp F6   &kp F7  &kp F8  &kp F9  &kp F10   &none
+ &trans  &kp N1  &kp N2  &kp N3   &kp N4  &kp N5                                                  &kp N6   &kp N7  &kp N8  &kp N9   &kp N0   &none
+  &none   &none   &none   &none  &kp F11   &none  &trans  &trans   &none  &trans  &trans  &trans   &none  &kp F12   &none   &none    &none   &none
+  &none   &none   &none   &none    &none          &trans  &trans  &trans  &trans  &trans  &trans            &none   &none   &none    &none   &none
             >;
         };
 
